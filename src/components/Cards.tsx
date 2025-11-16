@@ -17,7 +17,7 @@ function Cards({ title, description }: Props) {
     }, [])
 
     return (
-        <div className="bg-[#a62dbe2a] m-2 rounded-bl-md">
+        <div className="bg-[#a62dbe2a] rounded-lg p-5 flex flex-col gap-3">
             <h1 className="text-4xl">{title}</h1>
             <p className="text-3xl">{description}</p>
             <ul className="text-2xl">
