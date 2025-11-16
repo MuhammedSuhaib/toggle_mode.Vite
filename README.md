@@ -1,50 +1,28 @@
-# React + TypeScript + Vite
+## It is a Simple React `useState` Example
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + TypeScript + Vite project with Tailwind CSS and ESLint configuration that does nothing        
+It demonstrates how to use `useState` and `useCallback` to toggle between Light and Dark mode.      
 
-Currently, two official plugins are available:
+### Features
+- toggle Light/Dark mode 
+- use `useCallback` to memoize the toggle function
+- change UI classes based on the current mode
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Learnings from this Project
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
+- Conditional classes are used to switch between light and dark themes.
 ```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+    {isDarkMode ? "🌞" : "🌜"}
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- `useCallback` memoizes functions so they don’t recreate on every render.
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+//* useCallback: React hook to memoize the function.
+//? MEMOIZE means : Storing the result so you can use it next time instead of calculating the same thing again and again.
+/*
+    useCallback(function,   deps)
+                ⬇             ⬇
+    useCallback(() => {}, [dep1, dep2]);
+*/
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
