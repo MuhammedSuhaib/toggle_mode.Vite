@@ -1,5 +1,6 @@
 {
-  "name": "todo-app",
+  "name": "toggle_mode.Vite",
+  "homepage": "https://muhammedsuhaib.github.io/toggle_mode.Vite/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,6 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
