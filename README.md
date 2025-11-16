@@ -26,3 +26,32 @@ It demonstrates how to use `useState` and `useCallback` to toggle between Light 
 */
 
 ```
+
+___
+
+# Firebase Interview React Revision
+on 11-11-2025: I covered the core React fundamentals that are commonly asked in interviews:
+
+## About
+
+A small hands-on practice project created as a quick revision before a Firebase interview.
+
+## Key Concepts Covered
+* using `useState` for a counter
+* updating state (increment / decrement)
+* passing props to components (`Navbar`, `Card`)
+* fetching API data using `useEffect`
+* storing API response in state
+* mapping and rendering lists
+* basic TypeScript typings (`Props`, `Book`, component props)
+
+This practice helped reinforce the essentials and resulted in successfully securing the internship.
+
+# What This Project Does
+
+* Renders a navbar using props
+* Implements a counter with increment and decrement
+* Fetches book data from a public API
+* Stores the response in state
+* Maps and displays book names
+* Uses TailwindCSS for quick styling
