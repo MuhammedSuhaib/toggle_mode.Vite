@@ -32,9 +32,10 @@ function App() {
     <div
       className={`flex min-h-screen items-center p-9 transition-all duration-300 ${isDarkMode ? "bg-black text-white" : "bg-pink-100 text-black"}`}
     >
-      <div className="flex flex-1 flex-col items-center justify-center gap-5">
-        <span className="flex justify-center text-5xl">
-          Simple React&nbsp;<code className="text-red-700">useState</code>&nbsp;Example
+      <div className="reptitive gap-5">
+        <span className="flex justify-center text-4xl">
+          Simple React&nbsp;<code className="text-red-700">useState</code>
+          &nbsp;Example
         </span>
         <button
           type="button"
@@ -45,7 +46,11 @@ function App() {
         </button>
       </div>
       {/* Firebase Interview */}
-      <div className="">
+      <div className="reptitive gap-2">
+        <span className="flex justify-center text-3xl">
+          Firebase Interview&nbsp;<code className="text-red-700">React</code>
+          &nbsp;Revision
+        </span>
         <Navbar items={items} />
         <Card title="title here " description="Card Description" />
         <span className="flex justify-center text-5xl text-red-700">

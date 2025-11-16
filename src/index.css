@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.reptitive {
+    @apply flex flex-1 flex-col items-center justify-center;
+}
