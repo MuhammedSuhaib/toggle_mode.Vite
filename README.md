@@ -101,10 +101,7 @@ Folder: root
 1. Blank page usually means wrong base or wrong repo-name.
 2. If using React Router, use `HashRouter` because GitHub Pages doesn’t support BrowserRouter.
 
-
-
-
-
+## Tailwind CSS - Applying classes using @apply
 # To apply Tailwind CSS as classes in your project
 go to either `index.css` or `globals.css` and do it like this:
 ```
