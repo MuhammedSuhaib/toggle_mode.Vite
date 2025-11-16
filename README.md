@@ -56,3 +56,29 @@ This practice helped reinforce the essentials and resulted in successfully secur
 * Stores the response in state
 * Maps and displays book names
 * Uses TailwindCSS for quick styling
+
+# Learnings
+1. add base eg   
+  base: "/repo-name/",
+    in vite.config.ts for github pages deployment
+2. add homepage in package.json for github pages deployment
+    "homepage": "https://your-github-username.github.io/repo-name",
+3. install gh-pages package
+    npm install gh-pages --save-dev  or pnpm add gh-pages -D
+4. add deploy script in package.json
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+5. commit and push all changes
+6. run npm run deploy to deploy to github pages
+It will create a gh-pages branch in your repo and deploy the build folder to that branch. 
+so dont delete that branch. 
+7. go to repo settings -> pages -> select gh-pages branch and root folder to publish the site. or just click on the link of homepage in package.json after deployment.
+> It may take a few minutes to reflect the changes on the github pages site. so be patient.
+
+# Video Tutorial
+https://youtu.be/hn1IkJk24ow?si=qLfDBIaaMVgVWkUw start from 2:43
+Quick note:
+For most people, my tutorial is working fine and they are able to deploy. Some people still run into a blank page when deploying or have issues with images. So if this is you, check this out:
+
+1. For the blank page issue, most of the time its because you forgot to add the {base: "/REPO_NAME/",} to the viteconfig or you put the repository name incorrectly. Remember, its not the url to the repo, just the name.
+2. If you are using react router, please use React Routers HashRouter instead of browser router since github doesnt work with browser router.
