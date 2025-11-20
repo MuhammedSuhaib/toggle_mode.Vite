@@ -5,7 +5,7 @@ import Card from "./components/Cards";
 
 function App() {
   // State for theme mode (true = dark, false = light)
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   //* useCallback: React hook to memoize the function.
   //? MEMOIZE means : Storing the result so you can use it next time instead of calculating the same thing again and again.
